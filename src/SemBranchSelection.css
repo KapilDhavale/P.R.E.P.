@@ -1,0 +1,288 @@
+.container {
+  background-image: url('bg.PNG');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  font-family: Inter;
+  overflow:auto;
+}
+
+.black-box {
+  max-width: 558px;
+  width: calc(100% - 70px); /* Adjust width with margin on left and right */
+  margin: 0 auto; /* Center the black box horizontally */
+  height: 80vh;
+  border-radius: 36px;
+  background-color: rgba(0,0,0,0.600);
+
+  position: relative;
+}
+
+.top-text {
+  width: 428px;
+  height: 47px;
+  font-weight: bold;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.red-box {
+  width: 70%; /* Adjust width proportionally */
+  height: 50%;
+  background-color: rgba(234, 234, 234, 0.26);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the red box */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center items horizontally */
+  padding: 20px;
+  border-radius: 5px;
+
+}
+
+.label {
+  margin-right: 10px;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 700;
+  /* Vertically align text */
+  display: flex;
+  align-items: center;
+}
+
+.input-box-container {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  margin-bottom: 25px; /* Increase margin between input boxes */
+  /* Vertically align input box */
+  margin-top: 25px;
+  justify-content: flex-start; /* Align items to the start */
+}
+
+
+
+.input-box {
+  flex: 1; /* Expand input box to fill remaining space */
+  background-color: white;
+  border: 2px solid #333;
+  border-radius: 8px;
+  height: 35px;
+  font-family: Inter;
+  width: 300px; /* Change width of input box */
+}
+
+.create-account-btn {
+  width: 286px;
+  height: 45px;
+  position: absolute;
+  top: calc(50% + 10px); /* 10px below the bottom of .red-box */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 175, 56, 1); /* Example color */
+  color: white; /* Example color */
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 150px;
+  z-index: 1;
+}
+.create-account-btn:hover {
+  background-color: #a68b3f; /* Darken the button on hover */
+  cursor: pointer;
+}
+
+.bottom-text {
+  position: absolute;
+  bottom: 5px; /* Adjust bottom margin as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  color: white;
+  text-decoration: underline;
+}
+
+.login-link {
+  color: yellow;
+}
+
+/* Media Queries */
+@media (max-width: 615px) {
+  .input-box {
+    width: 350px; /* Change width of input box */
+    padding: 10px;
+  }
+
+  .input-box-container {
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    justify-content: flex-start; /* Align items to the start */
+  }
+
+  .input-box-container {
+    flex-direction: column; /* Stack input boxes vertically */
+    align-items: flex-start; /* Align input boxes to the start */
+  }
+}
+
+@media (max-width: 590px) {
+  .input-box {
+    width: 300px; /* Change width of input box */
+    padding: 10px;
+  }
+}
+
+@media (max-width: 550px) {
+  .input-box {
+    width: 275px; /* Change width of input box */
+    padding: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .input-box {
+    width: 225px; /* Change width of input box */
+    padding: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .input-box {
+    width: 200px; /* Change width of input box */
+    padding: 10px;
+  }
+}
+
+@media (max-width: 370px) {
+  .input-box {
+    width: 185px; /* Change width of input box */
+    padding: 10px;
+  }
+  .top-text {
+    width: 300px;
+  }
+}
+
+@media (max-width: 360px) {
+  .input-box {
+    width: 180px; /* Change width of input box */
+    padding: 10px;
+  }
+}
+
+@media (max-width: 345px) {
+  .input-box {
+    width: 170px; /* Change width of input box */
+    padding: 10px;
+  }
+}
+
+@media (max-width: 330px) {
+  .input-box {
+    width: 165px; /* Change width of input box */
+    padding: 10px;
+  }
+}
+@media (max-width: 470px) {
+  .create-account-btn {
+    width: 250px;
+  }
+}
+@media (max-width: 425px) {
+  .create-account-btn {
+    width: 150px;
+  }
+}
+
+/* Adjusting bottom text and link */
+@media (max-width: 425px) {
+  .bottom-text {
+    bottom: 15px; /* Adjust bottom margin as needed */
+  }
+}
+@media (max-height: 555px) {
+  .create-account-btn{
+    margin-top: 130px;
+  }
+}
+@media (max-height: 540px) {
+  .red-box{
+    height:30%;
+  }
+}
+
+@media (max-width: 320px) {
+  .bottom-text {
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+}
+@media (max-width: 517px) {
+  .bottom-text {
+    bottom: 5px; /* Adjust bottom margin as needed */
+    white-space: nowrap;
+  }
+}
+@media (max-width: 350px) {
+  .bottom-text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 615px) {
+  .label1{
+    margin-left: -14px; /* Adjust margin to remove whitespace */
+  }
+  .label2{
+    margin-left: -20px; /* Adjust margin to remove whitespace */
+  }
+  .label3{
+    margin-left: 1px; /* Adjust margin to remove whitespace */
+  }
+}
+
+.dropdown {
+  margin-bottom: 5px;
+   margin-top: 5px;
+  position: absolute;
+  height: 50px;
+  background-color: white; /* Change the background color to white */
+  border: 1px solid gray;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  display:flex;
+  flex-direction:column;
+  width:70%;
+}
+
+.option {
+  padding-left: 6px;
+   padding-right: 6px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  cursor: pointer;
+  color: black; /* Set the text color to black */
+  background-color:white;
+  border:gray;
+  
+ 
+}
+
+.option:hover {
+  background-color: #8c8282; /* Light gray with transparency */
+}

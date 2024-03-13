@@ -1,0 +1,253 @@
+/* navbar.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.bg-container {
+
+  width: 100%;
+  height: 100vh;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.profile {
+  margin-right: 5vw;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 165, 14, 1);
+  border-radius: 100px; /* Add border radius */
+}
+
+.top-rectangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 93px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to bottom, rgba(128, 97, 61, 0.25) 20%, rgba(255, 255, 255, 0.80) 80%); /* Adjust the direction and colors as needed */
+border-bottom: 1px solid lightgray;
+
+;
+  
+
+}
+
+.prep-text {
+  margin-top:1%;
+  margin-left: 40px;
+  font-size: 30px;
+  font-weight: 900;
+  font-family: 'Inter',sans-serif;
+  letter-spacing: 8px;
+  background-image: linear-gradient(to bottom, rgba(255, 130, 14, 1) 40%, rgba(255, 11, 11, 0.025)90%, rgba(255, 175, 56, 0) 80%);
+  -webkit-background-clip: text; /* For Safari */
+  background-clip: text;
+  color: transparent; 
+  
+}
+
+
+
+.profile {
+  margin-right: 5vw;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 165, 14, 1);
+ 
+}
+
+.dropdown-container {
+  margin-right: 1vw;
+  margin-left: 1vw;
+  background-color:transparent;
+  
+}
+
+.dropdown {
+  position: absolute;
+  display: flex;
+  border: none;
+  box-shadow:none;
+  margin-bottom: 1px;
+  padding-bottom:1px;
+  height: fit-content;
+  background-color:transparent;
+  font-weight: 200;
+  font-family: 'Inter',sans-serif;
+}
+
+.dropdown-toggle {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: calc(100% + 1px);
+  left: auto;
+  left: 0; /* Shift dropdown box towards right */
+  display: none;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content p {
+  color: #333;
+  padding: 10px;
+  margin: 0;
+
+}
+.dropdown-content p:hover{
+  background-color:rgba(217, 217, 217, 1);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.hamburger-icon {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 5vw;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.side-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 100%;
+  background-color: white;
+  z-index: 1;
+  padding-top: 93px;
+  transition: left 0.3s ease;
+}
+
+.side-panel.active {
+  left: 50%;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.hamburger-icon.active .bar1 {
+  transform: translateY(10px) rotate(-45deg);
+}
+
+.hamburger-icon.active .bar2 {
+  opacity: 0;
+}
+
+.hamburger-icon.active .bar3 {
+  transform: translateY(-10px) rotate(45deg);
+}
+
+@media screen and (max-width: 727px) {
+  .top-rectangle {
+    justify-content: space-between;
+    padding: 0 5vw;
+  }
+
+  .dropdown-container {
+    display: none;
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+
+  .side-panel {
+    width: 30vw; /* Adjust the width as needed */
+    left: 0; /* Align to the left */
+    padding: 20px; /* Add padding to the side panel */
+    background-color:lightgray;
+  }
+
+  .side-panel.active {
+    left: 0;
+    
+  }
+
+  .prep-text {
+    left: calc(50vw + 31px + 30px + 30px);
+  }
+
+  .dropdown-container {
+    text-align: center;
+    width: 100%;
+    margin: 10;
+  }
+
+  .side-panel .dropdown-content {
+    left: 90px;
+    right: auto; /* Adjust this value to shift the dropdown box towards the right */
+  
+  }
+
+  .side-panel .dropdown-content p{
+     color: #333;
+      padding: 10px;
+      margin: 0;
+    font-weight: normal;
+    }
+
+
+
+  .dropdown-container:not(:last-child) {
+    margin-left: 10vw;
+  }
+}
+
+/* Add these new styles */
+.side-panel ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  text-align: left; /* Align text to the left */
+  margin-top: 60px; /* Add margin to shift the elements down */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.side-panel ul li {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 25px; /* Adjust this value to increase the gap */
+}

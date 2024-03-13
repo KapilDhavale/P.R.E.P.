@@ -1,0 +1,26 @@
+{
+  "files": {
+    "index.jsx": [
+      {
+        "id": "065f4ec6-f0c8-4ef5-bcbc-9fd5ee683a24",
+        "line": 10,
+        "version": 1,
+        "index": 213
+      }
+    ],
+    "src/branch/ecs/sem3/subject/subjectpageED.jsx": [
+      {
+        "id": "50032b22-4310-42db-83ce-9daf8ba1b018",
+        "line": 1,
+        "version": 1,
+        "index": 0
+      },
+      {
+        "id": "083d4ccf-16d4-40ac-8a6a-39768e2603cd",
+        "line": 1,
+        "version": 1,
+        "index": 0
+      }
+    ]
+  }
+}
